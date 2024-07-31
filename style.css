@@ -1,0 +1,301 @@
+@import url('https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap');
+@import url('https://db.onlinewebfonts.com/c/a919779c7bf67165eaeaa5375be6fe90?family=Genty+Demo+Regular');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Patrick Hand", cursive;
+    box-sizing: border-box;
+}
+
+body {
+    overflow-x: hidden;
+    /* Prevent horizontal scrolling */
+}
+
+.head-img-holder {
+    width: 100%;
+    min-height: 400px;
+    /* Set a minimum height for the background image */
+    overflow: hidden;
+    /* Ensure the image does not cause overflow */
+    position: relative;
+    /* For positioning the main heading */
+}
+
+.head-img-holder .back-img {
+    width: 100%;
+    height: auto;
+    /* Maintain aspect ratio */
+    display: block;
+    /* Remove default inline element spacing */
+}
+
+.navbar {
+    position: absolute;
+    top: 5%;
+    width: 100%;
+}
+
+.head-menu-holder {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0px 20px;
+    /* Reduced margin for smaller screens */
+}
+
+.container .first {
+    background: white;
+    display: flex;
+    width: 86px;
+    align-items: center;
+    border: 2px solid black;
+    border-radius: 17px;
+    cursor: pointer;
+}
+
+.container .first span {
+    margin-left: 10px;
+    font-size: large;
+}
+
+.container .first img {
+    width: 30px;
+}
+
+.drop-menu {
+    background-color: white;
+    border: 2px solid black;
+    border-radius: 30px;
+    margin-top: 12px;
+    position: absolute;
+    top: 70%;
+    left: 10px;
+    z-index: 1000;
+    display: none;
+    min-width: 150px;
+    /* Minimum width to prevent shrinking */
+}
+
+.drop-menu ul {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.drop-menu ul li {
+    padding: 12px;
+    list-style: none;
+}
+
+.drop-menu ul li a {
+    display: flex;
+    align-items: center;
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.drop-menu ul li a img {
+    margin-right: 10px;
+    width: 20px;  /* Adjust size as needed */
+}
+
+.logo p {
+    font-family: "Genty Demo Regular";
+    font-size: 36px;
+}
+
+.other-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    /* Ensure row direction */
+}
+
+.other-btn a {
+    border: 2px solid black;
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+    margin: 0px 12px 0px 0px;
+    background-color: black;
+    padding: 6px;
+    cursor: pointer;
+}
+
+.Buy {
+    border: 2px solid rgb(0, 0, 0);
+    border-radius: 25px;
+    width: 150px;
+    height: 40px;
+    background-color: rgb(5, 163, 69);
+    color: white;
+    font-size: large;
+    cursor: pointer;
+}
+
+.main-heading {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translateX(-50%);
+    /* Center horizontally */
+    color: black;
+    width: auto;
+    text-align: center;
+}
+
+.main-heading h1 {
+    font-size: 5vw;
+    /* Responsive font size based on viewport width */
+    margin-bottom: 10px;
+    line-height: 1.2;
+    white-space: nowrap;
+}
+
+.main-heading h1 span {
+    font-family: "Genty Demo Regular";
+}
+
+/* Additional responsive styles for specific screen sizes */
+
+@media (max-width: 1200px) {
+    .main-heading h1 {
+        font-size: 4.5vw;
+        /* Slightly smaller font size */
+    }
+
+    .main-heading h1 span {
+        font-size: 4.5vw;
+    }
+}
+
+@media (max-width: 768px) {
+    .main-heading {
+        top: 30%;
+        left: 50%;
+        transform: translateX(-50%);
+        /* Keep centering */
+        text-align: center;
+        /* Align text to the center */
+    }
+
+    .main-heading h1 {
+        font-size: 6vw;
+        /* Smaller font size for smaller screens */
+        max-width: 90vw;
+        /* Ensure it doesn't exceed screen width */
+        white-space: normal;
+        /* Allow text to wrap */
+    }
+
+    .main-heading h1 span {
+        display: inline;
+        /* Display 'Thepe Coin!' on the same line */
+        font-size: 6vw;
+    }
+}
+
+@media (max-width: 480px) {
+    .main-heading {
+        top: 30%;
+        left: 50%;
+        transform: translateX(-50%);
+        /* Keep centering */
+        text-align: center;
+        /* Align text to the center */
+    }
+
+    .main-heading h1 {
+        font-size: 8vw;
+        max-width: 90vw;
+        /* Ensure it doesn't exceed screen width */
+        line-height: 1.2;
+        white-space: normal;
+        /* Allow text to wrap */
+    }
+
+    .main-heading h1 span {
+        display: inline;
+        /* Display 'Thepe Coin!' on the same line */
+        font-size: 8vw;
+    }
+}
+
+@media (max-width: 600px) {
+    .other-btn a,
+    .logo {
+        display: none;
+    }
+
+    .other-btn {
+        flex-direction: row;
+        /* Ensure row direction */
+    }
+
+    .main-heading h1 {
+        font-size: 36px;
+        max-width: 90vw;
+        /* Ensure it doesn't exceed screen width */
+    }
+
+    .main-heading h1 span {
+        font-size: 36px;
+    }
+}
+
+/* Add styles for hidden dropdown items */
+#dropMenuList li.hidden {
+    display: none;
+}
+
+@media (max-width: 770px) {
+    .other-btn a {
+        display: none;
+        /* Hide Twitter and Telegram icons */
+    }
+
+    .social-link {
+        display: block;
+    }
+
+    .other-btn .Buy {
+        width: 150px;
+        /* Maintain original width */
+        height: 40px;
+        /* Maintain original height */
+        font-size: large;
+        /* Maintain original font size */
+    }
+}
+
+@media (max-width: 500px) {
+    .main-heading h1 {
+        font-size: 32px;
+        max-width: 90vw;
+        /* Ensure it doesn't exceed screen width */
+    }
+
+    .main-heading h1 span {
+        font-size: 32px;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo p {
+        font-size: 24px;
+    }
+
+    .main-heading h1 {
+        font-size: 28px;
+        max-width: 90vw;
+        /* Ensure it doesn't exceed screen width */
+    }
+
+    .main-heading h1 span {
+        font-size: 28px;
+    }
+}
