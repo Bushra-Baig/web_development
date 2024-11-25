@@ -1,0 +1,167 @@
+/* body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.main-div {
+  display: flex;
+  gap: 10px;
+  
+  margin-left: 10px;
+}
+
+.right {
+  flex: 1;
+  max-width: 40%;
+}
+
+.right img {
+  width: 100%;
+  height: 178vh;
+}
+
+.left {
+  flex: 1;
+  max-width: 60%;
+  margin-top: 10px;
+}
+
+@media screen and (max-width: 1024px) {
+  .main-div {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .right, .left {
+    max-width: 90%; 
+  }
+  .right img{
+    width: 155vh;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .right, .left {
+    max-width: 100%; 
+  }
+
+  .right img {
+    max-width: 100%;
+    height: auto; 
+  }
+
+  .image-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .image-list {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+
+ */
+
+
+
+ body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+.main-div {
+  display: flex;
+  gap: 10px;
+  /* flex-wrap: wrap; */
+  margin-left: 10px;
+}
+
+.right {
+  flex: 1;
+  max-width: 40%;
+}
+
+.right img {
+  width: 100%;
+  height: 178vh;
+}
+
+.left {
+  flex: 1;
+  max-width: 60%;
+  margin-top: 10px;
+}
+
+/* Responsive layout for small screens */
+@media screen and (max-width: 1024px) {
+  .main-div {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .right, .left {
+    max-width: 90%; /* Adjust to 50% width on tablet */
+  }
+  .right img{
+    width: 145vh;
+  }
+ 
+}
+
+@media screen and (max-width: 768px) {
+  .right, .left {
+    max-width: 100%; /* Full width for mobile */
+  }
+
+  .right img {
+    max-width: 100%;
+    height: auto; /* Ensure images scale proportionally */
+  }
+
+  .image-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .image-list {
+    grid-template-columns: 1fr; /* Single column for mobile */
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .follow{
+    margin-top: 15rem;
+    margin-left: 4rem;
+    /* background-color: #fff; */
+    /* margin-left:6rem; */
+
+  }
+
+
+}
